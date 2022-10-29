@@ -1,5 +1,6 @@
 /* vendor */
 
+@import url(..//vendor/fonts.css);
 @import url(../vendor/normalize.css);
 
 /* page */
@@ -11,4 +12,23 @@
 @import url(../bloks/header/header.css);
 @import url(../bloks/header/__logo/header__logo.css);
 @import url(../bloks/header/__line/header__line.css);
+
+/* main */
+
+@import url(../bloks/content/content.css);
+
+/* profile */
+
+@import url(../bloks/profile/profile.css);
+@import url(../bloks/profile/__image/profile__image.css);
+@import url(../bloks/profile/__info/profile__info.css);
+@import url(../bloks/profile/__info/_title/profile__info_title.css);
+@import url(../bloks/profile/__info/_subtitle/profile__info_subtitle.css);
+@import url(../bloks/button/button.css);
+@import url(../bloks/profile/__info/_edit-button/profile__info_edit-button.css);
+@import url(../bloks/profile/__add-button/profile__add-button.css);
+
+
+
+@import url(../);
 @import url(../);
