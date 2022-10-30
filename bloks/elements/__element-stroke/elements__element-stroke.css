@@ -1,0 +1,10 @@
+.elements__element-stroke {
+  grid-row: 2/3;
+  z-index: 2;
+  background-color: #FFFFFF;
+  color: #000000;
+  border: #FFFFFF;
+  background-image: url(../../../image/elements__element-stroke.png);
+  width: 22px;
+  height: 19px;
+}
