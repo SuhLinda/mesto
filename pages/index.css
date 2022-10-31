@@ -36,7 +36,7 @@
 @import url(../bloks/elements/__element-text/elements__element-text.css);
 @import url(../bloks/elements/__element-stroke/elements__element-stroke.css);
 
+/* footer */
 
-
-@import url(../);
-@import url(../);
+@import url(../bloks/footer/footer.css);
+@import url(../bloks/footer/__title/footer__title.css);
