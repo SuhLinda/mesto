@@ -1,0 +1,7 @@
+.profile__info_edit-button {
+  grid-column: 2/3;
+  border: 1px solid #FFFFFF;
+  width: 24px;
+  height: 24px;
+  color: #FFFFFF;
+}

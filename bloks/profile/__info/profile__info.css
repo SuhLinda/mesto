@@ -1,0 +1,13 @@
+.profile__info {
+  display: grid;
+  grid-template-columns: 1fr minmax(18px, 24px);
+  column-gap: 18px;
+  align-content: center;
+  align-items: center;
+  font-family: 'Inter';
+  font-style: normal;
+  color: #FFFFFF;
+  min-width: 336px;
+  min-height: 73px;
+  margin: 0 244px 0 30px;
+}
