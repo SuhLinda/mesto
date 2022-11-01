@@ -5,6 +5,21 @@
   row-gap: 20px;
   column-gap: 17px;
   max-width: 880px;
-  max-height: 744px;
   margin: 0 auto 66px;
+}
+
+@media screen and (max-width: 900px) {
+  .elements {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .elements {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    column-gap: 0;
+    margin: 0 auto 48px;
+  }
 }
