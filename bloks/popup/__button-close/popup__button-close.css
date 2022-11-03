@@ -1,0 +1,21 @@
+.popup__button-close {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  border: 0 #000000;
+  box-sizing: border-box;
+  background-image: url(../../../image/popup__button-close.png);
+  background-position: center;
+  color: #FFFFFF;
+  width: 32px;
+  height: 32px;
+  transform: translateY(-35px) translateX(435px);
+}
+
+@media screen and (max-width: 425px) {
+  .popup__button-close {
+    width: 20px;
+    height: 20px;
+    transform: translateY(-35px) translateX(265px);
+  }
+}
