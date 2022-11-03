@@ -1,0 +1,127 @@
+.popup {
+  display: flex;
+  flex-direction: column;
+  width: 430px;
+  height: 330px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 425px) {
+  .popup {
+    width: 282px;
+    height: 322px;
+  }
+}
+
+.popup__button-close {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  border: 0 #000000;
+  box-sizing: border-box;
+  background-image: url(../../image/popup__button-close.png);
+  background-position: center;
+  color: #FFFFFF;
+  width: 32px;
+  height: 32px;
+  transform: translateY(-35px) translateX(435px);
+}
+
+@media screen and (max-width: 425px) {
+  .popup__button-close {
+    width: 20px;
+    height: 20px;
+    transform: translateY(-35px) translateX(265px);
+  }
+}
+
+.popup__edit {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  max-width: 330px;
+  min-height: 23px;
+  margin: 0 auto 54px 36px;
+}
+
+@media screen and (max-width: 425px) {
+  .popup__edit {
+    font-size: 18px;
+    line-height: 22px;
+    max-width: 238px;
+    min-height: 22px;
+    margin: 0 auto 75px;
+  }
+}
+
+.popup__name {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  border: 0 #FFFFFF;
+  border-bottom: 1px solid #000000;
+  width: 358px;
+  min-height: 14px;
+  margin: 0 auto 30px;
+  padding: 0 0 13px 0;
+}
+
+@media screen and (max-width: 425px) {
+  .popup__name {
+    width: 238px;
+  }
+}
+
+.popup__description {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  border: 0 #FFFFFF;
+  border-bottom: 1px solid #000000;
+  width: 358px;
+  min-height: 14px;
+  margin: 0 auto 45px;
+  padding: 0 0 13px 0;
+}
+
+@media screen and (max-width: 425px) {
+  .popup__description {
+    width: 238px;
+  }
+}
+
+.popup__button-save {
+  border: 0 #000000;
+  border-radius: 2px;
+  color: #FFFFFF;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  width: 358px;
+  height: 50px;
+  margin: 0 auto 37px;
+}
+
+@media screen and (max-width: 425px) {
+  .popup__button-save {
+    font-size: 14px;
+    line-height: 17px;
+    width: 238px;
+    height: 46px;
+  }
+}

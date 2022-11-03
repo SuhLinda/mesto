@@ -28,6 +28,10 @@
 @import url(../bloks/profile/__info/_edit-button/profile__info_edit-button.css);
 @import url(../bloks/profile/__add-button/profile__add-button.css);
 
+/* form */
+
+@import url(../bloks/popup/popup.css);
+
 /* elements */
 
 @import url(../bloks/elements/elements.css);
