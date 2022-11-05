@@ -7,10 +7,9 @@
 
 @import url(../bloks/page/page.css);
 
-/* button/input */
+/* button */
 
 @import url(../bloks/button/button.css);
-@import url(../bloks/input/input.css);
 
 /* header */
 
@@ -35,6 +34,7 @@
 /* form */
 
 @import url(../bloks/popup/popup.css);
+@import url(../bloks/popup/__opened/popup__opened.css);
 @import url(../bloks/popup/__form/popup__form.css);
 @import url(../bloks/popup/__button-close/popup__button-close.css);
 @import url(../bloks/popup/__edit/popup__edit.css);
