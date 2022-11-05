@@ -8,10 +8,24 @@
   min-height: 14px;
   margin: 0 auto 13px;
   padding: 0;
+
 }
 
 @media screen and (max-width: 425px) {
   .popup__name_input {
     width: 238px;
   }
+}
+
+.popup__name_input::placeholder {
+  color: #000000;
+  opacity: 1;
+}
+
+.popup__name_input:-ms-input-placeholder {
+  color: #000000;
+}
+
+.popup__name_input::-ms-input-placeholder {
+  color: #000000;
 }
