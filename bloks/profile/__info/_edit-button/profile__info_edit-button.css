@@ -1,5 +1,9 @@
 .profile__info_edit-button {
   grid-column: 2/3;
+  background-image: url(../../../../image/profile__info_edit-button.png);
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
   border: 1px solid #FFFFFF;
   width: 24px;
   height: 24px;
