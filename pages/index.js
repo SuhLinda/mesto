@@ -4,11 +4,11 @@ let closeButton = formPopUp.querySelector('.popup__button-close');
 let saveButton = formPopUp.querySelector('.popup__button-save');
 
 function showPopUp() {
-  formPopUp.classList.add('.popup__opened');
+  formPopUp.classList.add('popup__opened');
 };
 
 function hidePopUp() {
-  formPopUp.classList.remove('.popup__opened');
+  formPopUp.classList.remove('popup__opened');
 };
 
 let formElement = document.querySelector('.popup__form');
@@ -22,8 +22,8 @@ function formSubmitHandler (evt) {
     hidePopUp();
 }
 
-editButton.addEventListener('click', showPopUp());
+editButton.addEventListener('click', showPopUp);
 
-closeButton.addEventListener('click', hidePopUp());
+closeButton.addEventListener('click', hidePopUp);
 
-saveButton.addEventListener('submit', formSubmitHandler()); 
+saveButton.addEventListener('submit', formSubmitHandler); 
