@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   row-gap: 30px;
-  border: 0 white;
+  border: none;
   outline: none;
   width: 358px;
   margin: 0 auto 48px;
