@@ -7,4 +7,9 @@
   background-image: url(../../../image/elements__element-stroke.png);
   width: 22px;
   height: 19px;
+  cursor: pointer;
+}
+
+.elements__element-stroke:hover {
+  opacity: 0.5;
 }

@@ -19,3 +19,8 @@
     transform: translateY(-35px) translateX(265px);
   }
 }
+
+.popup__button-close:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}

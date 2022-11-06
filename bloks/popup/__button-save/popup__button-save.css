@@ -22,3 +22,8 @@
     margin: 0 22px 37px;
   }
 }
+
+.popup__button-save:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
