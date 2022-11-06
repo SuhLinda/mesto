@@ -1,4 +1,4 @@
-.popup__name_input {
+.popup__name-input {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -14,20 +14,20 @@
 }
 
 @media screen and (max-width: 425px) {
-  .popup__name_input {
+  .popup__name-input {
     width: 238px;
   }
 }
 
-.popup__name_input::placeholder {
+.popup__name-input::placeholder {
   color: #000000;
   opacity: 1;
 }
 
-.popup__name_input:-ms-input-placeholder {
+.popup__name-input:-ms-input-placeholder {
   color: #000000;
 }
 
-.popup__name_input::-ms-input-placeholder {
+.popup__name-input::-ms-input-placeholder {
   color: #000000;
 }

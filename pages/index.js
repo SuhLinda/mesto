@@ -1,4 +1,4 @@
-let editButton = document.querySelector('.profile__info_edit-button');
+let editButton = document.querySelector('.profile__info-edit');
 let formPopUp = document.querySelector('.popup');
 let closeButton = formPopUp.querySelector('.popup__button-close');
 let saveButton = formPopUp.querySelector('.popup__button-save');
@@ -17,8 +17,8 @@ function showLike() {
 };
 
 let formElement = document.querySelector('.popup__form');
-let nameInput = document.querySelector('.popup__name_input');
-let jobInput = document.querySelector('.popup__description_input');
+let nameInput = document.querySelector('.popup__name-input');
+let jobInput = document.querySelector('.popup__description-input');
 
 function formSubmitHandler (evt) {
     evt.preventDefault(); 

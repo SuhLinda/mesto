@@ -1,4 +1,4 @@
-.popup__description_input {
+.popup__description-input {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -13,20 +13,20 @@
 }
 
 @media screen and (max-width: 425px) {
-  .popup__description_input {
+  .popup__description-input {
     width: 238px;
   }
 }
 
-.popup__description_input::placeholder {
+.popup__description-input::placeholder {
   color: #000000;
   opacity: 1;
 }
 
-.popup__description_input:-ms-input-placeholder {
+.popup__description-input:-ms-input-placeholder {
   color: #000000;
 }
 
-.popup__description_input::-ms-input-placeholder {
+.popup__description-input::-ms-input-placeholder {
   color: #000000;
 }
