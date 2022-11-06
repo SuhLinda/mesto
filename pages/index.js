@@ -5,11 +5,11 @@ let saveButton = formPopUp.querySelector('.popup__button-save');
 let likeClick = document.querySelector('.elements__element-stroke');
 
 function showPopUp() {
-  formPopUp.classList.add('popup__opened');
+  formPopUp.classList.add('popup_opened');
 };
 
 function hidePopUp() {
-  formPopUp.classList.remove('popup__opened');
+  formPopUp.classList.remove('popup_opened');
 };
 
 function showLike() {
