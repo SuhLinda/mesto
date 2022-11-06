@@ -6,6 +6,7 @@
   box-sizing: border-box;
   background-image: url(../../../image/popup__button-close.png);
   background-position: center;
+  background-color: #000000;
   color: #FFFFFF;
   width: 32px;
   height: 32px;
