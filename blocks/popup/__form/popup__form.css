@@ -2,20 +2,14 @@
   position: relative;
   flex-direction: column;
   width: 430px;
-  height: 330px;
   background-color: #FFFFFF;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
-  top: 25%;
-  right: 0;
-  bottom: 0;
-  left: 0;
   margin: 0 auto;
 }
 
 @media screen and (max-width: 425px) {
   .popup__form {
     width: 282px;
-    height: 322px;
   }
 }

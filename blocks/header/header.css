@@ -2,7 +2,6 @@
   border: black;
   border-bottom: 1px solid rgba(84, 84, 84, 1);
   width: 880px;
-  height: 74px;
   margin: 0 auto 36px;
   padding-top: 45px;
 }
@@ -16,7 +15,6 @@
 @media screen and (max-width: 600px) {
   .header {
     width: 320px;
-    height: 56px;
     margin: 0 auto 38px;
     padding-top: 28px;
   }
