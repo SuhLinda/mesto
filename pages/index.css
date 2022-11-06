@@ -52,6 +52,7 @@
 @import url(../bloks/elements/__element-image/elements__element-image.css);
 @import url(../bloks/elements/__element-text/elements__element-text.css);
 @import url(../bloks/elements/__element-stroke/elements__element-stroke.css);
+@import url(../bloks/elements/__element-stroke/_active/elements__element-stroke_active.css);
 
 /* footer */
 

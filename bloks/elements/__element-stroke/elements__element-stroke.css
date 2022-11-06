@@ -5,6 +5,7 @@
   color: #000000;
   border: #FFFFFF;
   background-image: url(../../../image/elements__element-stroke.png);
+  background-repeat: no-repeat;
   width: 22px;
   height: 19px;
   cursor: pointer;
