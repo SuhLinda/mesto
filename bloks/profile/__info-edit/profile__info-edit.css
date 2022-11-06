@@ -1,6 +1,6 @@
 .profile__info-edit {
   grid-column: 2/3;
-  background-image: url(../../../../image/profile__info_edit-button.png);
+  background-image: url(../../../image/profile__info-edit.png);
   box-sizing: border-box;
   background-repeat: no-repeat;
   background-position: center;
