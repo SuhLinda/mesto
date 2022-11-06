@@ -1,4 +1,4 @@
-.popup__name-input {
+.popup__fieldset-input {
   font-family: 'Inter', 'Arial', 'sans-serif';
   font-style: normal;
   font-weight: 400;
@@ -7,27 +7,26 @@
   color: #000000;
   border: none;
   outline: none;
+  border-bottom: 1px solid #000000;
   width: 358px;
-  min-height: 14px;
-  margin: 0 auto 13px;
-  padding: 0;
+  padding-bottom: 13px;
 }
 
 @media screen and (max-width: 425px) {
-  .popup__name-input {
+  .popup__fieldset-input {
     width: 238px;
   }
 }
 
-.popup__name-input::placeholder {
+.popup__fieldset-input::placeholder {
   color: #000000;
   opacity: 1;
 }
 
-.popup__name-input:-ms-input-placeholder {
+.popup__fieldset-input:-ms-input-placeholder {
   color: #000000;
 }
 
-.popup__name-input::-ms-input-placeholder {
+.popup__fieldset-input::-ms-input-placeholder {
   color: #000000;
 }
