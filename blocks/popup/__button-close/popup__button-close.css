@@ -12,9 +12,10 @@
   height: 32px;
   padding: 0;
   transform: translateY(-35px) translateX(435px);
+  cursor: pointer;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 600px) {
   .popup__button-close {
     width: 20px;
     height: 20px;
@@ -24,5 +25,4 @@
 
 .popup__button-close:hover {
   opacity: 0.6;
-  cursor: pointer;
 }

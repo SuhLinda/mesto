@@ -10,7 +10,7 @@
   padding: 0;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 600px) {
   .popup__fieldset {
     width: 238px;
     margin: 0 auto 45px;
