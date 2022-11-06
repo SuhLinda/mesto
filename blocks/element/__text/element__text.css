@@ -1,4 +1,4 @@
-.elements__element-text {
+.element__text {
   grid-row: 2/3;
   z-index: 1;
   font-family: 'Inter', 'Arial', 'sans-serif';
@@ -17,7 +17,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  .elements__element-text {
+  .element__text {
     width: 246px;
     padding-bottom: 31px;
   }

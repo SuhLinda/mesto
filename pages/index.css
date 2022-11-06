@@ -33,11 +33,11 @@
 /* elements */
 
 @import url(../blocks/elements/elements.css);
-@import url(../blocks/elements/__element/elements__element.css);
-@import url(../blocks/elements/__element-image/elements__element-image.css);
-@import url(../blocks/elements/__element-text/elements__element-text.css);
-@import url(../blocks/elements/__element-stroke/elements__element-stroke.css);
-@import url(../blocks/elements/__element-stroke/_active/elements__element-stroke_active.css);
+@import url(../blocks/element/element.css);
+@import url(../blocks/element/__image/element__image.css);
+@import url(../blocks/element/__text/element__text.css);
+@import url(../blocks/element/__stroke/element__stroke.css);
+@import url(../blocks/element/__stroke/_active/element__stroke_active.css);
 
 /* footer */
 

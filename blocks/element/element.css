@@ -1,4 +1,4 @@
-.elements__element {
+.element {
   display: grid;
   grid-template-columns: 1fr 52px;
   z-index: 1;
@@ -12,7 +12,7 @@
 }
 
 @media screen and (max-width: 900px) {
-  .elements__element {
+  .element {
     margin: 0 auto;
   }
 }
