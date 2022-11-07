@@ -2,7 +2,7 @@
 let buttonEdit = document.querySelector('.profile__info-edit');
 let formPopUp = document.querySelector('.popup');
 let closeButton = formPopUp.querySelector('.popup__button-close');
-let formElement = document.querySelector('.popup__form');
+let formElement = document.getElementById('popup__form');
 let nameInput = document.getElementById('name-input');
 let newName = document.querySelector('.profile__info-title');
 let jobInput = document.getElementById('description-input');
@@ -10,11 +10,9 @@ let newJob = document.querySelector('.profile__info-subtitle');
 
 // функция открытия popUp
 function showPopUp() {
-  if (buttonEdit) {
-    nameInput.value = document.querySelector('.profile__info-title').textContent;
-    jobInput.value = document.querySelector('.profile__info-subtitle').textContent;
+    newName.textContent;
+    newJob.textContent;
     formPopUp.classList.add('popup_opened');
-  }
 };
 
 //функция закрытия popUp

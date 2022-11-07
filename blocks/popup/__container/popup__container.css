@@ -1,4 +1,4 @@
-.popup__form {
+.popup__container {
   display: flex;
   position: fixed;
   flex-direction: column;
