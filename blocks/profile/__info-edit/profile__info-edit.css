@@ -4,7 +4,7 @@
   box-sizing: border-box;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0);
   border: 1px solid #FFFFFF;
   width: 24px;
   height: 24px;

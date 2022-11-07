@@ -1,4 +1,7 @@
 .profile__info-subtitle {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;

@@ -6,12 +6,14 @@
   box-sizing: border-box;
   background-image: url(../../../image/popup__button-close.svg);
   background-position: center;
-  background-color: #000000;
+  background-size: contain;
+  background-color: rgba(0, 0, 0, 0);
   color: #FFFFFF;
   width: 32px;
   height: 32px;
+  margin-bottom: 16px;
   padding: 0;
-  transform: translateY(-35px) translateX(435px);
+  transform: translateY(-45px) translateX(435px);
   cursor: pointer;
 }
 
@@ -19,7 +21,7 @@
   .popup__button-close {
     width: 20px;
     height: 20px;
-    transform: translateY(-35px) translateX(265px);
+    transform: translateY(-25px) translateX(260px);
   }
 }
 
