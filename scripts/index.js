@@ -10,23 +10,23 @@ let newJob = document.querySelector('.profile__info-subtitle');
 
 // функция открытия popUp
 function showPopUp() {
-    newName.textContent;
-    newJob.textContent;
+    nameInput.value = newName.textContent;
+    jobInput.value = newJob.textContent;
     formPopUp.classList.add('popup_opened');
-};
+}
 
 //функция закрытия popUp
 function hidePopUp() {
   formPopUp.classList.remove('popup_opened');
-};
+}
 
 // функция присвоения введённых данных
 function submitHandlerForm (evt) {
     evt.preventDefault();
     newName.textContent = nameInput.value;
     newJob.textContent = jobInput.value;
-    hidePopUp();
-};
+    hidePopUp()
+}
 
 // слушатели клика
 buttonEdit.addEventListener('click', showPopUp);
