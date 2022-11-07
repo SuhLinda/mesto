@@ -1,33 +1,36 @@
-let editButton = document.querySelector('.profile__info-edit');
+// определение переменных
+let buttonEdit = document.querySelector('.profile__info-edit');
 let formPopUp = document.querySelector('.popup');
 let closeButton = formPopUp.querySelector('.popup__button-close');
-let saveButton = formPopUp.querySelector('.popup__button-save');
-let likeClick = document.querySelector('.elements__element-stroke');
+let formElement = document.querySelector('.popup__form');
+let nameInput = document.getElementById('name-input');
+let newName = document.querySelector('.profile__info-title');
+let jobInput = document.getElementById('description-input');
+let newJob = document.querySelector('.profile__info-subtitle');
 
+// функция открытия popUp
 function showPopUp() {
-  formPopUp.classList.add('popup_opened');
+  if (buttonEdit) {
+    nameInput.value = document.querySelector('.profile__info-title').textContent;
+    jobInput.value = document.querySelector('.profile__info-subtitle').textContent;
+    formPopUp.classList.add('popup_opened');
+  }
 };
 
+//функция закрытия popUp
 function hidePopUp() {
   formPopUp.classList.remove('popup_opened');
 };
 
-function showLike() {
-  likeClick.classList.add('elements__element-stroke_active');
+// функция присвоения введённых данных
+function submitHandlerForm (evt) {
+    evt.preventDefault();
+    newName.textContent = nameInput.value;
+    newJob.textContent = jobInput.value;
+    hidePopUp();
 };
 
-let formElement = document.querySelector('.popup__form');
-let nameInput = document.querySelector('.popup__name-input');
-let jobInput = document.querySelector('.popup__description-input');
-
-function formSubmitHandler (evt) {
-    evt.preventDefault(); 
-    nameInput.textContent = nameInput.value;
-    jobInput.textContent = jobInput.value;
-    hidePopUp();
-}
-
-editButton.addEventListener('click', showPopUp);
+// слушатели клика
+buttonEdit.addEventListener('click', showPopUp);
 closeButton.addEventListener('click', hidePopUp);
-formElement.addEventListener('submit', formSubmitHandler);
-likeClick.addEventListener('click', showLike);
+formElement.addEventListener('submit', submitHandlerForm);
