@@ -11,9 +11,9 @@
   color: #FFFFFF;
   width: 32px;
   height: 32px;
-  margin-bottom: 16px;
   padding: 0;
   transform: translateY(-45px) translateX(435px);
+  bottom: 16px;
   cursor: pointer;
 }
 
@@ -21,7 +21,7 @@
   .popup__button-close {
     width: 20px;
     height: 20px;
-    transform: translateY(-25px) translateX(260px);
+    transform: translateY(-35px) translateX(260px);
   }
 }
 

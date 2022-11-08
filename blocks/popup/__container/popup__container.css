@@ -1,12 +1,13 @@
 .popup__container {
   display: flex;
-  position: fixed;
-  flex-direction: column;
+  position: relative;
   justify-content: center;
   align-items: center;
   background-color: #FFFFFF;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
   border-radius: 10px;
-  max-width: 430px;
-  margin: 0;
+  max-width: 100%;
+  margin: 25px 19px;
+
 }
