@@ -1,7 +1,6 @@
 .popup__button-close {
   display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
+  position: absolute;
   border: none;
   box-sizing: border-box;
   background-image: url(../../../image/popup__button-close.svg);
@@ -12,8 +11,8 @@
   width: 32px;
   height: 32px;
   padding: 0;
-  transform: translateY(-45px) translateX(435px);
-  bottom: 16px;
+  right: -40px;
+  top: -40px;
   cursor: pointer;
 }
 
@@ -21,7 +20,8 @@
   .popup__button-close {
     width: 20px;
     height: 20px;
-    transform: translateY(-35px) translateX(260px);
+    right: 0;
+    top: -38px;
   }
 }
 
