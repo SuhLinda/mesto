@@ -3,7 +3,7 @@
   grid-template-columns: 1fr 52px;
   z-index: 1;
   justify-items: start;
-  align-items: baseline;
+  align-items: flex-start;
   background-color: #FFFFFF;
   border-radius: 10px;
   width: 282px;
