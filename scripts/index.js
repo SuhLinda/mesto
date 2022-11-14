@@ -1,17 +1,18 @@
 // определение переменных
 let buttonEdit = document.querySelector('.profile__info-edit');
 let formPopUp = document.querySelector('.popup');
-let buttonClose = formPopUp.querySelector('.popup__button-close');
+let buttonClose = document.getElementById('popup__button-close_edit');
 let formElement = document.getElementById('popup__form');
 let nameInput = document.getElementById('name-input');
 let newName = document.querySelector('.profile__info-title');
 let jobInput = document.getElementById('description-input');
 let newJob = document.querySelector('.profile__info-subtitle');
 const elementsContainer = document.querySelector('.elements');
+const templateElement = document.querySelector('#template__element').content;
 
 let buttonAdd = document.querySelector('.profile__add-button');
 let formPopUpAdd = document.getElementById('popup__card');
-let buttonCloseAdd = formPopUpAdd.querySelector('.popup__button-close_card');
+let buttonCloseAdd = document.getElementById('popup__button-close_card');
 let formElementAdd = document.getElementById('popup__form__card');
 let nameInputCard = document.getElementById('name-input_card');
 let newNameCard = document.querySelector('.element__text');
@@ -46,14 +47,24 @@ const initialCards = [
 ]; 
 
 // функция добавления карточек
+
+
 initialCards.forEach(function (element) {
-  const templateElement = document.querySelector('#template__element').content;
   const elementCard = templateElement.cloneNode(true);
 
   elementCard.querySelector('.element__image').src = element.link;
   elementCard.querySelector('.element__text').textContent = element.name;
+
   elementsContainer.append(elementCard);
+
+  elementCard.querySelector('.element__stroke').addEventListener('click', function (evt) {
+    evt.classList.toggle('.element__stroke_active');
+  }); 
+
 })
+
+
+
 
 // функция открытия popUp
 function showPopUp() {
@@ -90,10 +101,17 @@ function hidePopUpCard() {
 // функция присвоения введённых данных card
 function submitAddForm (evt) {
   evt.preventDefault();
-  newNameCard.textContent = nameInputCard.value;
-  newlink.src = linkInput.value;
+
+  initialCards.slice(0, 0,
+    'name: nameInputCard.textContent',
+    'link: linkInput.value'
+  );
+
+  initialCards.pop();
+
   hidePopUpCard()
 }
+
 
 // слушатели клика
 buttonEdit.addEventListener('click', showPopUp);
