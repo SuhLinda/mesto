@@ -7,9 +7,6 @@ let nameInput = document.getElementById('name-input');
 let newName = document.querySelector('.profile__info-title');
 let jobInput = document.getElementById('description-input');
 let newJob = document.querySelector('.profile__info-subtitle');
-const elementsContainer = document.querySelector('.elements');
-const templateElement = document.querySelector('#template__element').content;
-
 let buttonAdd = document.querySelector('.profile__add-button');
 let formPopUpAdd = document.getElementById('popup__card');
 let buttonCloseAdd = document.getElementById('popup__button-close_card');
@@ -18,6 +15,8 @@ let nameInputCard = document.getElementById('name-input_card');
 let newNameCard = document.querySelector('.element__text');
 let linkInput = document.getElementById('image-input');
 let newlink = document.querySelector('.profile__info-subtitle');
+const elementsContainer = document.querySelector('.elements');
+const templateElement = document.querySelector('#template__element').content;
 
 const initialCards = [
   {
@@ -47,20 +46,30 @@ const initialCards = [
 ]; 
 
 // функция добавления карточек
-
-
 initialCards.forEach(function (element) {
   const elementCard = templateElement.cloneNode(true);
-
   elementCard.querySelector('.element__image').src = element.link;
   elementCard.querySelector('.element__text').textContent = element.name;
-
   elementsContainer.append(elementCard);
+})
 
-  elementCard.querySelector('.element__stroke').addEventListener('click', function (evt) {
-    evt.classList.toggle('.element__stroke_active');
-  }); 
+// buttonLike
+let buttonLike = document.querySelectorAll('.element__stroke');
+buttonLike.forEach(like => {
+  like.addEventListener('click', function (evt) {
+    like.classList.toggle('element__stroke_active');
+  })
+})
 
+// buttonDelete
+
+
+
+let buttonDelete = document.querySelectorAll('.element__delete');
+buttonDelete.forEach(del => {
+  del.addEventListener('click', function (evt) {
+    del.closest('.element');
+  })
 })
 
 
@@ -101,17 +110,23 @@ function hidePopUpCard() {
 // функция присвоения введённых данных card
 function submitAddForm (evt) {
   evt.preventDefault();
+  elementsContainer.removeChild(elementsContainer.lastElementChild);
+  const elementCard = templateElement.cloneNode(true);
+  elementCard.querySelector('.element__image').src = linkInput.value;
+  elementCard.querySelector('.element__text').textContent = nameInputCard.value;
+  elementsContainer.prepend(elementCard);
+  elementsContainer.querySelector('.element__stroke').addEventListener('click', function (evt) {
+    evt.target.classList.toggle('element__stroke_active');
+  });
+  elementsContainer.querySelector('.element__delete').addEventListener('click', function (evt) {
+    elementsContainer.closest('.element');
+  })
 
-  initialCards.slice(0, 0,
-    'name: nameInputCard.textContent',
-    'link: linkInput.value'
-  );
 
-  initialCards.pop();
+
 
   hidePopUpCard()
 }
-
 
 // слушатели клика
 buttonEdit.addEventListener('click', showPopUp);
@@ -119,4 +134,4 @@ buttonClose.addEventListener('click', hidePopUp);
 formElement.addEventListener('submit', submitHandlerForm);
 buttonAdd.addEventListener('click', showPopUpCard);
 buttonCloseAdd.addEventListener('click', hidePopUpCard);
-formElementAdd.addEventListener('click', submitAddForm);
+formElementAdd.addEventListener('submit', submitAddForm);

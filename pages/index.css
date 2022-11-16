@@ -31,7 +31,7 @@
 @import url(../blocks/elements/elements.css);
 @import url(../blocks/element/element.css);
 @import url(../blocks/element/__image/element__image.css);
-@import url(../blocks/element/__basket/element__basket.css);
+@import url(../blocks/element/__delete/element__delete.css);
 @import url(../blocks/element/__text/element__text.css);
 @import url(../blocks/element/__stroke/element__stroke.css);
 @import url(../blocks/element/__stroke/_active/element__stroke_active.css);

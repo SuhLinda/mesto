@@ -1,4 +1,4 @@
-.element__basket {
+.element__delete {
   grid-row: 1/2;
   grid-column: 2/3;
   z-index: 2;
@@ -14,6 +14,6 @@
   cursor: pointer;
 }
 
-.element__basket:hover {
+.element__delete:hover {
   opacity: 0.5;
 }
