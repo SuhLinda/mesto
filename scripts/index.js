@@ -1,23 +1,4 @@
 // определение переменных
-let buttonEdit = document.querySelector('.profile__info-edit');
-let formPopUp = document.querySelector('.popup');
-let buttonClose = document.getElementById('popup__button-close_edit');
-let formElement = document.getElementById('popup__form');
-let nameInput = document.getElementById('name-input');
-let newName = document.querySelector('.profile__info-title');
-let jobInput = document.getElementById('description-input');
-let newJob = document.querySelector('.profile__info-subtitle');
-let buttonAdd = document.querySelector('.profile__add-button');
-let formPopUpAdd = document.getElementById('popup__card');
-let buttonCloseAdd = document.getElementById('popup__button-close_card');
-let formElementAdd = document.getElementById('popup__form__card');
-let nameInputCard = document.getElementById('name-input_card');
-let newNameCard = document.querySelector('.element__text');
-let linkInput = document.getElementById('image-input');
-let newlink = document.querySelector('.profile__info-subtitle');
-const elementsContainer = document.querySelector('.elements');
-const templateElement = document.querySelector('#template__element').content;
-
 const initialCards = [
   {
     name: 'Архыз',
@@ -44,6 +25,22 @@ const initialCards = [
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
   }
 ]; 
+const buttonEdit = document.querySelector('.profile__info-edit');
+const formPopUp = document.querySelector('.popup');
+const buttonClose = document.getElementById('popup__button-close_edit');
+const formElement = document.getElementById('popup__form');
+const nameInput = document.getElementById('name-input');
+const newName = document.querySelector('.profile__info-title');
+const jobInput = document.getElementById('description-input');
+const newJob = document.querySelector('.profile__info-subtitle');
+const buttonAdd = document.querySelector('.profile__add-button');
+const formPopUpAdd = document.getElementById('popup__card');
+const buttonCloseAdd = document.getElementById('popup__button-close_card');
+const formElementAdd = document.getElementById('popup__form__card');
+const nameInputCard = document.getElementById('name-input_card');
+const linkInput = document.getElementById('image-input');
+const elementsContainer = document.querySelector('.elements');
+const templateElement = document.querySelector('#template__element').content;
 
 // функция добавления карточек
 initialCards.forEach(function (element) {
@@ -54,7 +51,7 @@ initialCards.forEach(function (element) {
 })
 
 // buttonLike
-let buttonLike = document.querySelectorAll('.element__stroke');
+const buttonLike = document.querySelectorAll('.element__stroke');
 buttonLike.forEach(like => {
   like.addEventListener('click', function (evt) {
     like.classList.toggle('element__stroke_active');
@@ -62,18 +59,13 @@ buttonLike.forEach(like => {
 })
 
 // buttonDelete
-
-
-
-let buttonDelete = document.querySelectorAll('.element__delete');
+const buttonDelete = document.querySelectorAll('.element__delete');
 buttonDelete.forEach(del => {
   del.addEventListener('click', function (evt) {
-    del.closest('.element');
+    const delItem = del.closest('.element');
+    delItem.parentNode.removeChild(delItem);
   })
 })
-
-
-
 
 // функция открытия popUp
 function showPopUp() {
@@ -107,23 +99,30 @@ function hidePopUpCard() {
   formPopUpAdd.classList.remove('popup_opened');
 }
 
+
+
 // функция присвоения введённых данных card
 function submitAddForm (evt) {
   evt.preventDefault();
-  elementsContainer.removeChild(elementsContainer.lastElementChild);
+
+  //elementsContainer.removeChild(elementsContainer.lastElementChild);
+
   const elementCard = templateElement.cloneNode(true);
   elementCard.querySelector('.element__image').src = linkInput.value;
   elementCard.querySelector('.element__text').textContent = nameInputCard.value;
   elementsContainer.prepend(elementCard);
+
   elementsContainer.querySelector('.element__stroke').addEventListener('click', function (evt) {
     evt.target.classList.toggle('element__stroke_active');
-  });
-  elementsContainer.querySelector('.element__delete').addEventListener('click', function (evt) {
-    elementsContainer.closest('.element');
   })
+const buttonDelete = document.querySelectorAll('.element__delete');
+buttonDelete.forEach(del => {
+  del.addEventListener('click', function (evt) {
+    const delItem = del.closest('.element');
+    delItem.parentNode.removeChild(delItem);
 
-
-
+  })
+})
 
   hidePopUpCard()
 }

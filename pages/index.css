@@ -51,3 +51,7 @@
 @import url(../blocks/popup/__fieldset/popup__fieldset.css);
 @import url(../blocks/popup/__fieldset-input/popup__fieldset-input.css);
 @import url(../blocks/popup/__button-save/popup__button-save.css);
+@import url(../blocks/popup/__zoom/popup__zoom.css);
+@import url(../blocks/popup/__zoom-close/popup__zoom-close.css);
+@import url(../blocks/popup/__zoom-image/popup__zoom-image.css);
+@import url(../blocks/popup/__zoom-subtitle/popup__zoom-subtitle.css);
