@@ -48,7 +48,11 @@ const buttonCloseZoom = document.getElementById('popup__zoom-close');
 const imgZoom = document.getElementById('popup__zoom-image');
 const subtitleZoom = document.getElementById('popup__zoom-subtitle');
 
-
+function showPopUpZoom() {
+  imgZoom.src = element.link;
+  subtitleZoom.textContent = element.name;
+  formPopUpZoom.classList.add('popup_opened');
+}
 
 
 //функция закрытия popUpZoom
@@ -64,13 +68,9 @@ initialCards.forEach(function (element) {
   elementCard.querySelector('.element__text').textContent = element.name;
   elementsContainer.append(elementCard);
   // функция открытия popUpZoom
-  const openZoom = document.querySelector('.element');
-  function showPopUpZoom() {
-    imgZoom.src = element.link;
-    subtitleZoom.textContent = element.name;
-    formPopUpZoom.classList.add('popup_opened');
-}
-openZoom.addEventListener('click', showPopUpZoom);
+
+
+const openZoom = document.querySelector('.element').addEventListener('click', showPopUpZoom);
 })
 
 // buttonLike
@@ -142,13 +142,8 @@ function submitAddForm (evt) {
   hidePopUpCard()
 
   // функция открытия popUpZoom
-  const openZoom = document.querySelector('.element');
-  function showPopUpZoom() {
-    imgZoom.src = element.link;
-    subtitleZoom.textContent = element.name;
-    formPopUpZoom.classList.add('popup_opened');
-}
-  openZoom.addEventListener('click', showPopUpZoom);
+
+  const openZoom = document.querySelector('.element').addEventListener('click', showPopUpZoom);
 }
 
 // слушатели клика
