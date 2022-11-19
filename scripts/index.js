@@ -42,6 +42,28 @@ const linkInput = document.getElementById('image-input');
 const elementsContainer = document.querySelector('.elements');
 const templateElement = document.querySelector('#template__element').content;
 
+const openZoom = document.querySelector('.element__image');
+const formPopUpZoom = document.querySelector('.popup__zoom');
+const buttonCloseZoom = document.getElementById('popup__zoom-close');
+const imgZoom = document.getElementById('popup__zoom-image');
+const subtitleZoom = document.getElementById('popup__zoom-subtitle');
+
+
+// функция открытия popUpZoom
+function showPopUpZoom() {
+  imgZoom.src = element.link;
+  subtitleZoom.textContent = element.name;
+  formPopUpZoom.classList.add('popup_opened');
+}
+
+//функция закрытия popUpZoom
+function hidePopUpZoom() {
+  formPopUpZoom.classList.remove('popup_opened');
+}
+
+openZoom.addEventListener('onclick', showPopUpZoom);
+buttonCloseZoom.addEventListener('click', hidePopUpZoom);
+
 // функция добавления карточек
 initialCards.forEach(function (element) {
   const elementCard = templateElement.cloneNode(true);
@@ -99,31 +121,23 @@ function hidePopUpCard() {
   formPopUpAdd.classList.remove('popup_opened');
 }
 
-
-
 // функция присвоения введённых данных card
 function submitAddForm (evt) {
   evt.preventDefault();
-
-  //elementsContainer.removeChild(elementsContainer.lastElementChild);
-
   const elementCard = templateElement.cloneNode(true);
   elementCard.querySelector('.element__image').src = linkInput.value;
   elementCard.querySelector('.element__text').textContent = nameInputCard.value;
   elementsContainer.prepend(elementCard);
-
   elementsContainer.querySelector('.element__stroke').addEventListener('click', function (evt) {
     evt.target.classList.toggle('element__stroke_active');
   })
-const buttonDelete = document.querySelectorAll('.element__delete');
-buttonDelete.forEach(del => {
-  del.addEventListener('click', function (evt) {
-    const delItem = del.closest('.element');
-    delItem.parentNode.removeChild(delItem);
-
+  const buttonDelete = document.querySelectorAll('.element__delete');
+  buttonDelete.forEach(del => {
+    del.addEventListener('click', function (evt) {
+      const delItem = del.closest('.element');
+      delItem.parentNode.removeChild(delItem);
   })
 })
-
   hidePopUpCard()
 }
 

@@ -1,0 +1,13 @@
+.popup__zoom-container {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  row-gap: 0;
+  max-width: 75vw;
+  max-height: 75vh;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
