@@ -42,24 +42,23 @@ const linkInput = document.getElementById('image-input');
 const elementsContainer = document.querySelector('.elements');
 const templateElement = document.getElementById('template__element').content;
 
-
 const formPopUpZoom = document.querySelector('.popup__zoom');
 const buttonCloseZoom = document.getElementById('popup__zoom-close');
 const imgZoom = document.getElementById('popup__zoom-image');
 const subtitleZoom = document.getElementById('popup__zoom-subtitle');
+const elementImage = document.getElementById('.element__image');
+const elementText = document.getElementById('.element__text');
 
 function showPopUpZoom() {
-  imgZoom.src = element.link;
-  subtitleZoom.textContent = element.name;
+  imgZoom.src = elementImage.value;
+  subtitleZoom.textContent = elementText.value;
   formPopUpZoom.classList.add('popup_opened');
 }
-
 
 //функция закрытия popUpZoom
 function hidePopUpZoom() {
   formPopUpZoom.classList.remove('popup_opened');
 }
-
 
 // функция добавления карточек
 initialCards.forEach(function (element) {
@@ -67,10 +66,7 @@ initialCards.forEach(function (element) {
   elementCard.querySelector('.element__image').src = element.link;
   elementCard.querySelector('.element__text').textContent = element.name;
   elementsContainer.append(elementCard);
-  // функция открытия popUpZoom
-
-
-const openZoom = document.querySelector('.element').addEventListener('click', showPopUpZoom);
+document.querySelector('.element').addEventListener('click', showPopUpZoom);
 })
 
 // buttonLike
@@ -140,10 +136,7 @@ function submitAddForm (evt) {
   })
 })
   hidePopUpCard()
-
-  // функция открытия popUpZoom
-
-  const openZoom = document.querySelector('.element').addEventListener('click', showPopUpZoom);
+document.querySelector('.element').addEventListener('click', showPopUpZoom);
 }
 
 // слушатели клика
@@ -153,6 +146,4 @@ formElement.addEventListener('submit', submitHandlerForm);
 buttonAdd.addEventListener('click', showPopUpCard);
 buttonCloseAdd.addEventListener('click', hidePopUpCard);
 formElementAdd.addEventListener('submit', submitAddForm);
-
-
 buttonCloseZoom.addEventListener('click', hidePopUpZoom);
