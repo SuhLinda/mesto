@@ -42,23 +42,11 @@ const linkInput = document.getElementById('image-input');
 const elementsContainer = document.querySelector('.elements');
 const templateElement = document.getElementById('template__element').content;
 
-const formPopUpZoom = document.querySelector('.popup__zoom');
-const buttonCloseZoom = document.getElementById('popup__zoom-close');
-const imgZoom = document.getElementById('popup__zoom-image');
-const subtitleZoom = document.getElementById('popup__zoom-subtitle');
-const elementImage = document.getElementById('.element__image');
-const elementText = document.getElementById('.element__text');
+const formPopUpZoom = document.getElementById('popup__zoom');
 
-function showPopUpZoom() {
-  imgZoom.src = elementImage.value;
-  subtitleZoom.textContent = elementText.value;
-  formPopUpZoom.classList.add('popup_opened');
-}
 
-//функция закрытия popUpZoom
-function hidePopUpZoom() {
-  formPopUpZoom.classList.remove('popup_opened');
-}
+
+
 
 // функция добавления карточек
 initialCards.forEach(function (element) {
@@ -66,7 +54,10 @@ initialCards.forEach(function (element) {
   elementCard.querySelector('.element__image').src = element.link;
   elementCard.querySelector('.element__text').textContent = element.name;
   elementsContainer.append(elementCard);
-document.querySelector('.element').addEventListener('click', showPopUpZoom);
+
+  document.querySelector('.element__image').addEventListener('click', function (evt) {
+    formPopUpZoom.classList.add('popup_opened');
+  });
 })
 
 // buttonLike
@@ -136,8 +127,10 @@ function submitAddForm (evt) {
   })
 })
   hidePopUpCard()
-document.querySelector('.element').addEventListener('click', showPopUpZoom);
+
 }
+
+
 
 // слушатели клика
 buttonEdit.addEventListener('click', showPopUp);
@@ -146,4 +139,3 @@ formElement.addEventListener('submit', submitHandlerForm);
 buttonAdd.addEventListener('click', showPopUpCard);
 buttonCloseAdd.addEventListener('click', hidePopUpCard);
 formElementAdd.addEventListener('submit', submitAddForm);
-buttonCloseZoom.addEventListener('click', hidePopUpZoom);
