@@ -44,20 +44,22 @@ const templateElement = document.getElementById('template__element').content;
 
 const formPopUpZoom = document.getElementById('popup__zoom');
 
-
-
-
+// закрытие PopUpZoom
+document.querySelector('.popup__zoom-close').addEventListener('click', function () {
+  formPopUpZoom.style.display = 'none';
+})
 
 // функция добавления карточек
 initialCards.forEach(function (element) {
   const elementCard = templateElement.cloneNode(true);
   elementCard.querySelector('.element__image').src = element.link;
   elementCard.querySelector('.element__text').textContent = element.name;
+  elementCard.querySelector('.element__image').addEventListener('click', function () {
+    formPopUpZoom.style.display = 'flex';
+    const imgZoom = document.getElementById('popup__zoom-image').src = element.link;
+    const textZoom = document.getElementById('popup__zoom-subtitle').textContent = element.name;
+  })
   elementsContainer.append(elementCard);
-
-  document.querySelector('.element__image').addEventListener('click', function (evt) {
-    formPopUpZoom.classList.add('popup_opened');
-  });
 })
 
 // buttonLike
