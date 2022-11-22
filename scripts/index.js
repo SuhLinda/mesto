@@ -41,21 +41,18 @@ const nameInputCard = document.getElementById('name-input_card');
 const linkInput = document.getElementById('image-input');
 const elementsContainer = document.querySelector('.elements');
 const templateElement = document.getElementById('template__element').content;
-
 const formPopUpZoom = document.getElementById('popup__zoom');
-
-// закрытие PopUpZoom
-document.querySelector('.popup__zoom-close').addEventListener('click', function () {
-  formPopUpZoom.style.display = 'none';
-})
 
 // функция добавления карточек
 initialCards.forEach(function (element) {
   const elementCard = templateElement.cloneNode(true);
   elementCard.querySelector('.element__image').src = element.link;
   elementCard.querySelector('.element__text').textContent = element.name;
+  // открытие popUpZoom
   elementCard.querySelector('.element__image').addEventListener('click', function () {
     formPopUpZoom.style.display = 'flex';
+    formPopUpZoom.style.visibility = 'visible';
+    formPopUpZoom.style.opacity = '1';
     const imgZoom = document.getElementById('popup__zoom-image').src = element.link;
     const textZoom = document.getElementById('popup__zoom-subtitle').textContent = element.name;
   })
@@ -77,6 +74,12 @@ buttonDelete.forEach(del => {
     const delItem = del.closest('.element');
     delItem.parentNode.removeChild(delItem);
   })
+})
+
+// закрытие PopUpZoom
+document.querySelector('.popup__zoom-close').addEventListener('click', function () {
+  formPopUpZoom.style.visibility = 'hidden';
+  formPopUpZoom.style.opacity = '0';
 })
 
 // функция открытия popUp
@@ -129,10 +132,15 @@ function submitAddForm (evt) {
   })
 })
   hidePopUpCard()
-
+    // открытие popUpZoom
+  elementsContainer.querySelector('.element__image').addEventListener('click', function (evt) {
+    formPopUpZoom.style.display = 'flex';
+    formPopUpZoom.style.visibility = 'visible';
+    formPopUpZoom.style.opacity = '1';
+    const imgZoom = document.getElementById('popup__zoom-image').src = linkInput.value;
+    const textZoom = document.getElementById('popup__zoom-subtitle').textContent = nameInputCard.value;
+  })
 }
-
-
 
 // слушатели клика
 buttonEdit.addEventListener('click', showPopUp);
