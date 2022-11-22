@@ -1,4 +1,4 @@
-.popup__zoom-close {
+.popup_zoom-close {
   display: flex;
   position: absolute;
   border: none;
@@ -18,43 +18,43 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .popup__zoom-close {
+  .popup_zoom-close {
     transform: translateY(85px) translateX(470px);
   }
 }
 
 @media screen and (max-width: 1100px) {
-  .popup__zoom-close {
+  .popup_zoom-close {
     transform: translateY(55px) translateX(430px);
   }
 }
 
 @media screen and (max-width: 1024px) {
-  .popup__zoom-close {
+  .popup_zoom-close {
     transform: translateY(55px) translateX(410px);
   }
 }
 
 @media screen and (max-width: 900px) {
-  .popup__zoom-close {
+  .popup_zoom-close {
     transform: translateY(35px) translateX(360px);
   }
 }
 
 @media screen and (max-width: 800px) {
-  .popup__zoom-close {
+  .popup_zoom-close {
     transform: translateY(35px) translateX(320px);
   }
 }
 
 @media screen and (max-width: 700px) {
-  .popup__zoom-close {
+  .popup_zoom-close {
     transform: translateY(35px) translateX(290px);
   }
 }
 
 @media screen and (max-width: 600px) {
-  .popup__zoom-close {
+  .popup_zoom-close {
     transform: translateY(75px) translateX(250px);
     width: 20px;
     height: 20px;
@@ -62,29 +62,29 @@
 }
 
 @media screen and (max-width: 540px) {
-  .popup__zoom-close {
+  .popup_zoom-close {
     transform: translateY(75px) translateX(230px);
   }
 }
 
 @media screen and (max-width: 500px) {
-  .popup__zoom-close {
+  .popup_zoom-close {
     transform: translateY(45px) translateX(200px);
   }
 }
 
 @media screen and (max-width: 400px) {
-  .popup__zoom-close {
+  .popup_zoom-close {
     transform: translateY(45px) translateX(160px);
   }
 }
 
 @media screen and (max-width: 320px) {
-  .popup__zoom-close {
+  .popup_zoom-close {
     transform: translateY(45px) translateX(130px);
   }
 }
 
-.popup__zoom-close:hover {
+.popup_zoom-close:hover {
   opacity: 0.6;
 }

@@ -41,7 +41,7 @@ const nameInputCard = document.getElementById('name-input_card');
 const linkInput = document.getElementById('image-input');
 const elementsContainer = document.querySelector('.elements');
 const templateElement = document.getElementById('template__element').content;
-const formPopUpZoom = document.getElementById('popup__zoom');
+const formPopUpZoom = document.getElementById('popup_zoom');
 
 // функция добавления карточек
 initialCards.forEach(function (element) {
@@ -53,8 +53,8 @@ initialCards.forEach(function (element) {
     formPopUpZoom.style.display = 'flex';
     formPopUpZoom.style.visibility = 'visible';
     formPopUpZoom.style.opacity = '1';
-    const imgZoom = document.getElementById('popup__zoom-image').src = element.link;
-    const textZoom = document.getElementById('popup__zoom-subtitle').textContent = element.name;
+    const imgZoom = document.getElementById('popup_zoom-image').src = element.link;
+    const textZoom = document.getElementById('popup_zoom-subtitle').textContent = element.name;
   })
   elementsContainer.append(elementCard);
 })
@@ -77,7 +77,7 @@ buttonDelete.forEach(del => {
 })
 
 // закрытие PopUpZoom
-document.querySelector('.popup__zoom-close').addEventListener('click', function () {
+document.querySelector('.popup_zoom-close').addEventListener('click', function () {
   formPopUpZoom.style.visibility = 'hidden';
   formPopUpZoom.style.opacity = '0';
 })
@@ -137,8 +137,8 @@ function submitAddForm (evt) {
     formPopUpZoom.style.display = 'flex';
     formPopUpZoom.style.visibility = 'visible';
     formPopUpZoom.style.opacity = '1';
-    const imgZoom = document.getElementById('popup__zoom-image').src = linkInput.value;
-    const textZoom = document.getElementById('popup__zoom-subtitle').textContent = nameInputCard.value;
+    const imgZoom = document.getElementById('popup_zoom-image').src = linkInput.value;
+    const textZoom = document.getElementById('popup_zoom-subtitle').textContent = nameInputCard.value;
   })
 }
 
