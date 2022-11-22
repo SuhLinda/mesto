@@ -53,8 +53,8 @@ initialCards.forEach(function (element) {
     formPopUpZoom.style.display = 'flex';
     formPopUpZoom.style.visibility = 'visible';
     formPopUpZoom.style.opacity = '1';
-    const imgZoom = document.getElementById('popup-zoom__container_image').src = element.link;
-    const textZoom = document.getElementById('popup-zoom__container_subtitle').textContent = element.name;
+    const imgZoom = document.getElementById('popup-zoom__image').src = element.link;
+    const textZoom = document.getElementById('popup-zoom__subtitle').textContent = element.name;
   })
   elementsContainer.append(elementCard);
 })
@@ -137,8 +137,8 @@ function submitAddForm (evt) {
     formPopUpZoom.style.display = 'flex';
     formPopUpZoom.style.visibility = 'visible';
     formPopUpZoom.style.opacity = '1';
-    const imgZoom = document.getElementById('popup-zoom__container_image').src = linkInput.value;
-    const textZoom = document.getElementById('popup-zoom__container_subtitle').textContent = nameInputCard.value;
+    const imgZoom = document.getElementById('popup-zoom__image').src = linkInput.value;
+    const textZoom = document.getElementById('popup-zoom__subtitle').textContent = nameInputCard.value;
   })
 }
 

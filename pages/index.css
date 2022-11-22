@@ -54,5 +54,5 @@
 @import url(../blocks/popup-zoom/popup-zoom.css);
 @import url(../blocks/popup-zoom/__close/popup-zoom__close.css);
 @import url(../blocks/popup-zoom/__container/popup-zoom__container.css);
-@import url(../blocks/popup-zoom/__container/_image/popup-zoom__container_image.css);
-@import url(../blocks/popup-zoom/__container/_subtitle/popup-zoom__container_subtitle.css);
+@import url(../blocks/popup-zoom/__image/popup-zoom__image.css);
+@import url(../blocks/popup-zoom/__subtitle/popup-zoom__subtitle.css);
