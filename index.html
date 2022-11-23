@@ -8,6 +8,8 @@
   <meta name="keywords" content="">
   <meta name="author" content="Linda Suhovenko">
   <link rel="stylesheet" href="pages/index.css">
+  <script defer src="./scripts/cards.js"></script>
+  <script defer src="./scripts/index.js"></script>
   <title>Mesto</title>
 </head>
 
@@ -54,12 +56,15 @@
       </p>
     </footer>
     <!-- popup -->
-    <div class="popup">
+    <div 
+      class="popup" 
+      id="popup__edit">
       <div class="popup__container">
         <button 
         class="popup__button-close"
         id="popup__button-close_edit"
-        type="button">
+        type="button"
+        aria-label="закрыть">
       </button>
       <h2 class="popup__edit">Редактировать профиль
       </h2>
@@ -71,17 +76,18 @@
             <input 
               class="popup__fieldset-input"
               id="name-input" 
-              value=""
-              name="name">
+              name="name"
+              placeholder="Имя">
             <input 
               class="popup__fieldset-input"
               id="description-input" 
-              value=""
-              name="description">
+              name="description"
+              placeholder="О себе">
           </fieldset>
           <button 
             class="popup__button-save" 
-            type="submit">Сохранить
+            type="submit"
+            aria-label="сохранить">Сохранить
           </button>
         </form>
       </div>
@@ -92,41 +98,45 @@
         <button 
           class="popup__button-close"
           id="popup__button-close_card"
-          type="button">
+          type="button"
+          aria-label="закрыть">
         </button>
         <h2 class="popup__edit">Новое место
         </h2>
         <form 
           class="popup__form"
           name="popup"
-          id="popup__form__card">
+          id="popup__form_card">
           <fieldset class="popup__fieldset">
             <input 
               class="popup__fieldset-input"
               id="name-input_card" 
-              value=""
-              name="name">
+              name="name"
+              placeholder="Название">
             <input 
               class="popup__fieldset-input"
               id="image-input" 
-              value=""
-              name="image">
+              name="image"
+              placeholder="Ссылка на картинку">
           </fieldset>
           <button 
             class="popup__button-save" 
-            type="submit">Создать
+            type="submit"
+            aria-label="создать">Создать
           </button>
         </form>
       </div>
     </div>
      <!-- popup-zoom -->
      <div 
-       class="popup-zoom" 
+       class="popup popup-zoom" 
        id="popup-zoom">
       <button 
         class="popup-zoom__close" 
         id="popup-zoom__close" 
-        type="button"></button>
+        type="button"
+        aria-label="закрыть">
+      </button>
       <div class="popup-zoom__container">
         <img 
           class="popup-zoom__image"
@@ -148,16 +158,17 @@
         alt="">
         <button 
           class="element__delete" 
-          type="button">
+          type="button"
+          aria-label="удалить">
         </button>
         <h2 class="element__text"></h2>
         <button 
           class="element__stroke" 
-          type="button">
+          type="button"
+          aria-label="лайк">
         </button>
       </div>
     </template>
   </div>
-  <script src="./scripts/index.js"></script>
 </body>
 </html>
