@@ -10,7 +10,7 @@ const newJob = document.querySelector('.profile__info-subtitle');
 const buttonAdd = document.querySelector('.profile__add-button');// кнопка открытия окна добавления карточек popUpAdd
 const PopUpAdd = document.getElementById('popup__card');
 
-const buttonCloseAdd = document.getElementById('popup__button-close_card');// кнопка закрытия popUpAdd
+const buttonCloseAdd = document.querySelectorAll('.popup__button-close');// кнопка закрытия popUpAdd
 
 const formAddElement = document.getElementById('popup__form_card');
 const nameInputCard = document.getElementById('name-input_card');
