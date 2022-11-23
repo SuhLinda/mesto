@@ -1,7 +1,7 @@
 // определение переменных
 const buttonEdit = document.querySelector('.profile__info-edit');// кнопка открытия окна редактирования popUpEdit
 
-const popUpEdit = document.getElementById('profile__info-edit');
+const popUpEdit = document.querySelector('.profile__info-edit');
 
 const buttonClose = document.querySelectorAll('.popup__button-close');// кнопка закрытия popUpEdit
 const formEditElement = document.getElementById('popup__form');
@@ -28,7 +28,6 @@ const popUpZoom = document.getElementById('popup-zoom');
   buttonClose.forEach(close => {
     close.addEventListener('click', function (evt) {
       close.closest('.popup').classList.remove('popup_opened');
-
     })
   })
 
