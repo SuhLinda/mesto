@@ -1,4 +1,4 @@
-.popup-zoom__container_subtitle {
+.popup-zoom__subtitle {
   font-family: 'Inter', 'Arial', 'sans-serif';
   font-style: normal;
   font-weight: 400;
@@ -6,5 +6,5 @@
   line-height: 15px;
   min-height: 12px;
   color: #FFFFFF;
-  margin: 10px 0 0;
+  margin: 0 auto 0 0;
 }

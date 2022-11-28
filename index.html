@@ -32,14 +32,16 @@
         <div class="profile__info">
           <h1 class="profile__info-title">Жак-Ив Кусто</h1>
           <button 
-            class="profile__info-edit edit" 
+            class="profile__info-edit open"
+            id="popup__edit"
             type="button"
             aria-label="редактировать профиль">
           </button>
           <p class="profile__info-subtitle">Исследователь океана</p>
         </div>
         <button 
-          class="profile__add-button edit" 
+          class="profile__add-button open"
+          id="popup__card"
           type="button"
           aria-label="добавить">
         </button>
@@ -57,7 +59,7 @@
     </footer>
     <!-- popup -->
     <div 
-      class="popup" 
+      class="popup popup__edit"
       id="popup__edit">
       <div class="popup__container">
         <button 
@@ -85,7 +87,7 @@
               placeholder="О себе">
           </fieldset>
           <button 
-            class="popup__button-save" 
+            class="popup__button-save"
             type="submit"
             aria-label="сохранить">Сохранить
           </button>
@@ -93,7 +95,7 @@
       </div>
     </div>
     <!-- popup__card -->
-    <div class="popup" id="popup__card">
+    <div class="popup popup__card" id="popup__card">
       <div class="popup__container">
         <button 
           class="popup__button-close"
@@ -133,7 +135,7 @@
        id="popup-zoom">
       <div class="popup-zoom__container">
         <button 
-          class="popup__button-close" 
+          class="popup-zoom__close popup__button-close" 
           id="popup-zoom__close" 
           type="button"
           aria-label="закрыть">
@@ -141,11 +143,11 @@
         <img 
           class="popup-zoom__image"
           id="popup-zoom__image"
-          src="#"
+          src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg"
           alt="">
         <h2 
           class="popup-zoom__subtitle" 
-          id="popup-zoom__subtitle">МСНГЕИОЛТДЬ</h2>
+          id="popup-zoom__subtitle"></h2>
        </div>
      </div>
     <!-- template__element -->
