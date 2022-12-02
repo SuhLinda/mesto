@@ -2,7 +2,7 @@
 const buttonEdit = document.querySelector('.profile__info-edit');// кнопка открытия окна редактирования popUpEdit
 const popUpEdit = document.querySelector('.popup__edit');//окно popUp edit
 const buttonClose = document.querySelectorAll('.popup__button-close');// кнопка закрытия popUpS
-const buttonAdd = document.querySelector('.profile__add-button');// кнопка открытия окна добавления карточек popUpAdd
+
 const popUpAdd = document.querySelector('.popup__card');//окно popUp card
 const imgZoom = document.querySelector('.popup-zoom__image');
 const textZoom = document.querySelector('.popup-zoom__subtitle');
@@ -46,7 +46,7 @@ const templateElement = document.getElementById('template__element');
 
 
 // функция создания карточек
-function createCard () {
+function createCard (name, link) {
   const elementCard = templateElement.content.cloneNode(true);
   const img = elementCard.querySelector('.element__image');
   const text = elementCard.querySelector('.element__text');
@@ -63,20 +63,29 @@ function createCard () {
     textZoom.textContent = text.textContent;
   })
   buttonLike.addEventListener('click', (evt) => evt.target.classList.toggle('element__stroke_active'));
-  buttonDelete.addEventListener('click', (evt) => evt.target.closest('.template__element').remove());
+  //buttonDelete.addEventListener('click', (evt) => evt.target.closest('.element').remove()); 
 
   return elementCard;
 }
 
-
+function prependEnd(box, card) {
+  box.prepend(card);
+}
 
 // функция добавления карточек
-initialCards.forEach((card) => renderElement(elements, createCard(item.name, item.link)));
+initialCards.forEach((card) => prependEnd(elements, createCard(card.name, card.link)));
+
+const buttonAdd = document.querySelector('.profile__add-button');// кнопка открытия окна добавления карточек popUpAdd
+//const formPlace = document.querySelector('[name="place"]');
+
+formPlace.addEventListener('click', (evt) => {
+  prependEnd(elements, createCard(imgZoom.value, textZoom.value));
+  submitEditForm (evt)
+})
 
 
-  elementCard.querySelector('.element__image').alt = element.name;
   // открытие popUpZoom
-  lementCard.querySelector('.element__image').addEventListener('click', function () {
+  /*lementCard.querySelector('.element__image').addEventListener('click', function () {
     popUpZoom.classList.add('popup_opened');
     const imgZoom = document.getElementById('popup-zoom__image').src = element.link;
     const textZoom = document.getElementById('popup-zoom__subtitle').textContent = element.name;
@@ -133,5 +142,5 @@ function submitAddForm (evt) {
 buttonEdit.addEventListener('click', () => {openPopUp(popUpEdit), submitEditForm});//слушает клик и открывает popUpEdit
 formEditElement.addEventListener('submit', submitEditForm);//слушает клик и заносит данные в EditForm
 buttonAdd.addEventListener('click', () => {openPopUp(popUpAdd)});//слушает клик и открывает popUpAdd
-formAddElement.addEventListener('submit', submitAddForm);
+formAddElement.addEventListener('submit', createCard);
 buttonZoom.addEventListener('click', () => {openPopUp(popUpZoom)});//слушает клик и открывает popUpZoom
