@@ -51,7 +51,7 @@ function createCard (name, link) {
   const img = elementCard.querySelector('.element__image');
   const text = elementCard.querySelector('.element__text');
   const buttonLike = elementCard.querySelector('.element__stroke');
-  const buttonDelete = elementCard.querySelectorAll('.element__delete');
+  const buttonDelete = elementCard.querySelector('.element__delete');
   img.src = link;
   img.alt = name;
   text.textContent = name;
@@ -63,7 +63,7 @@ function createCard (name, link) {
     textZoom.textContent = text.textContent;
   })
   buttonLike.addEventListener('click', (evt) => evt.target.classList.toggle('element__stroke_active'));
-  //buttonDelete.addEventListener('click', (evt) => evt.target.closest('.element').remove()); 
+  buttonDelete.addEventListener('click', (evt) => evt.target.closest('.element').remove()); 
 
   return elementCard;
 }
@@ -80,7 +80,7 @@ const buttonAdd = document.querySelector('.profile__add-button');// кнопка
 
 formPlace.addEventListener('click', (evt) => {
   prependEnd(elements, createCard(imgZoom.value, textZoom.value));
-  submitEditForm (evt)
+  submitEditForm(evt);
 })
 
 
