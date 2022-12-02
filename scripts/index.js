@@ -80,6 +80,7 @@ const formPlace = document.querySelector('.popup__fieldset-input');
 
 formPlace.addEventListener('click', (evt) => {
   prependEnd(elements, createCard(imgZoom.value, textZoom.value));
+  formDefault(evt);
   submitEditForm(evt);
 })
 
@@ -142,5 +143,8 @@ function submitAddForm (evt) {
 buttonEdit.addEventListener('click', () => {openPopUp(popUpEdit), submitEditForm});//слушает клик и открывает popUpEdit
 formEditElement.addEventListener('submit', submitEditForm);//слушает клик и заносит данные в EditForm
 buttonAdd.addEventListener('click', () => {openPopUp(popUpAdd)});//слушает клик и открывает popUpAdd
-formAddElement.addEventListener('submit', createCard);
+formAddElement.addEventListener('submit', (evt) => {
+  evt.preventDefault();
+  createCard(nameInputCard.value, linkInput.value);
+});
 buttonZoom.addEventListener('click', () => {openPopUp(popUpZoom)});//слушает клик и открывает popUpZoom
