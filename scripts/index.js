@@ -73,7 +73,7 @@ function prependEnd(box, card) {
 }
 
 // функция добавления карточек
-initialCards.forEach((card) => prependEnd(elements, createCard(card.name, card.link)));
+initialCards.forEach((card) => prependEnd(elements, createCard(nameInputCard.name, linkInput.link)));
 
 const buttonAdd = document.querySelector('.profile__add-button');// кнопка открытия окна добавления карточек popUpAdd
 const formPlace = document.querySelector('.popup__fieldset-input');
