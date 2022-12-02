@@ -76,7 +76,7 @@ function prependEnd(box, card) {
 initialCards.forEach((card) => prependEnd(elements, createCard(card.name, card.link)));
 
 const buttonAdd = document.querySelector('.profile__add-button');// кнопка открытия окна добавления карточек popUpAdd
-//const formPlace = document.querySelector('[name="place"]');
+const formPlace = document.querySelector('.popup__fieldset-input');
 
 formPlace.addEventListener('click', (evt) => {
   prependEnd(elements, createCard(imgZoom.value, textZoom.value));
