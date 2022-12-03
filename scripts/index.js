@@ -1,6 +1,6 @@
 // определение переменных
 const buttonEdit = document.querySelector('.profile__info-edit');// кнопка открытия окна редактирования popUpEdit
-const popUpEdit = document.querySelector('.popup__edit');//окно popUp edit
+const popUpEdit = document.querySelector('.popup__edit-form');//окно popUp edit
 const buttonCloses = document.querySelectorAll('.popup__button-close');// кнопка закрытия popUpS
 const formEditElement = document.getElementById('popup__form');
 const nameInput = document.getElementById('name-input');
@@ -27,8 +27,8 @@ function openPopUp(popUp) {
 }
 
 // закрытие PopUpS
-function closePopUp() {
-  popUpAdd.classList.remove('popup_opened');
+function closePopUp(popUp) {
+  popUp.classList.remove('popup_opened');
 }
 
 //перебираем все кнопки close
@@ -43,7 +43,7 @@ function submitEditForm (evt) {
   evt.preventDefault();
   newName.textContent = nameInput.value;
   newJob.textContent = jobInput.value;
-  closePopUp();
+  closePopUp(popUpEdit);
 }
   
 // функция создания карточек
@@ -93,7 +93,7 @@ formAddElement.addEventListener('submit', (evt) => {
   resetForm();
   prependEnd(elements, createCard(nameInputCard.value, linkInput.value));
   formDefault(evt);
-  closePopUp();
+  closePopUp(popUpAdd);
 });
 
 // слушатели
