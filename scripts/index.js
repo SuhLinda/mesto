@@ -1,6 +1,6 @@
 // определение переменных
 const buttonEdit = document.querySelector('.profile__info-edit');// кнопка открытия окна редактирования popUpEdit
-const popUpEdit = document.querySelector('.popup__form_edit');//окно popUp edit
+const popUpEdit = document.querySelector('.popup__window-edit');//окно popUp edit
 const buttonCloses = document.querySelectorAll('.popup__button-close');// кнопка закрытия popUpS
 const formEditElement = document.getElementById('popup__form');
 const nameInput = document.getElementById('name-input');
@@ -9,7 +9,7 @@ const jobInput = document.getElementById('description-input');
 const newJob = document.querySelector('.profile__info-subtitle');
 const buttonAdd = document.querySelector('.profile__add-button');// кнопка открытия окна добавления карточек popUpAdd
 const formPlace = document.querySelector('.popup__fieldset-input');
-const popUpAdd = document.querySelector('.popup__form_cards');//окно popUp card
+const popUpAdd = document.querySelector('.popup__window-card');//окно popUp card
 const formAddElement = document.getElementById('popup__form_card');
 const nameInputCard = document.getElementById('name-input_card');
 const linkInput = document.getElementById('image-input');
