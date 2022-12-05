@@ -1,8 +1,8 @@
 // определение переменных
 const buttonEdit = document.querySelector('.profile__info-edit');// кнопка открытия окна редактирования popUpEdit
 const popUpEdit = document.querySelector('.popup_edit');//окно popUp edit
-const buttonCloses = document.querySelectorAll('.popup__button-close');// кнопка закрытия popUpS
-const formEditElement = document.getElementById('popup__form');
+const closeButtons = document.querySelectorAll('.popup');// кнопка закрытия popUpS
+const formEditElement = document.querySelector('#popup__form_edit');
 const nameInput = document.getElementById('name-input');
 const newName = document.querySelector('.profile__info-title');
 const jobInput = document.getElementById('description-input');
@@ -23,7 +23,6 @@ const elements = document.querySelector('.elements');
 // функция открытия popUpS
 function openPopUp(popUp) {
   popUp.classList.add('popup_opened');
-  return popUp;
 }
 
 // закрытие PopUpS
@@ -31,12 +30,10 @@ function closePopUp(popUp) {
   popUp.classList.remove('popup_opened');
 }
 
-//перебираем все кнопки close
-buttonCloses.forEach(closes => {
-  closes.addEventListener('click', function () {
-    closes.closest('.popup').classList.remove('popup_opened');
-  })
-})
+function assignData() {
+  nameInput.value = newName.textContent;
+  jobInput.value = newJob.textContent;
+}
 
 // функция присвоения введённых данных
 function submitEditForm (evt) {
@@ -61,7 +58,7 @@ function createCard (name, link) {
   img.addEventListener('click', () => {
     openPopUp(popUpZoom);
     imgZoom.src = img.src;
-    img.alt = text.textContent;
+    imgZoom.alt = text.textContent;
     textZoom.textContent = text.textContent;
   })
   buttonLike.addEventListener('click', (evt) => evt.target.classList.toggle('element__stroke_active'));
@@ -70,35 +67,33 @@ function createCard (name, link) {
   return elementCard;
 }
 
-//очищаем форму
-function resetForm() {
-  nameInputCard.value.reset;
-  linkInput.value.reset;
-}
-
-//отменяем стандартное действие
-function formDefault(evt) {
-  evt.preventDefault();
-}
-
 //ставим новый элемент на 1ое место
-function prependEnd(box, card) {
+function prependCard(box, card) {
   box.prepend(card);
 }
 
 // функция добавления карточек
-initialCards.forEach((card) => prependEnd(elements, createCard(card.name, card.link)));
+initialCards.forEach((card) => prependCard(elements, createCard(card.name, card.link)));
 
 formAddElement.addEventListener('submit', (evt) => {
-  resetForm();
-  prependEnd(elements, createCard(nameInputCard.value, linkInput.value));
-  formDefault(evt);
+  evt.preventDefault();
+  prependCard(elements, createCard(nameInputCard.value, linkInput.value));
+  formAddElement.reset();
   closePopUp(popUpAdd);
 });
 
 // слушатели
-buttonEdit.addEventListener('click', () => {openPopUp(popUpEdit), submitEditForm});//слушает клик и открывает popUpEdit
+
+//перебираем окна popup и слушаем кнопку close
+closeButtons.forEach(popup => {
+  popup.addEventListener('click', (evt) => {
+    if (evt.target.classList.contains('popup_opened') || evt.target.classList.contains('popup__button-close')) {
+      closePopUp(popup);
+    }
+  })
+})
+
+buttonEdit.addEventListener('click', () => {openPopUp(popUpEdit), assignData(popUpEdit)});//слушает клик и открывает popUpEdit
 formEditElement.addEventListener('submit', submitEditForm);//слушает клик и заносит данные в EditForm
 buttonAdd.addEventListener('click', () => {openPopUp(popUpAdd)});//слушает клик и открывает popUpAdd
-formAddElement.addEventListener('submit', (evt) => {formDefault(evt);});
 buttonZoom.addEventListener('click', () => {openPopUp(popUpZoom)});//слушает клик и открывает popUpZoom
