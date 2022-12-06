@@ -1,22 +1,22 @@
 // определение переменных
 const buttonEdit = document.querySelector('.profile__info-edit');// кнопка открытия окна редактирования popUpEdit
 const popUpEdit = document.querySelector('.popup_edit');//окно popUp edit
-const closeButtons = document.querySelectorAll('.popup');// кнопка закрытия popUpS
+const popupButtons = document.querySelectorAll('.popup');// кнопка закрытия popUpS
 const formEditElement = document.querySelector('#popup__form_edit');
-const nameInput = document.getElementById('name-input');
+const nameInput = document.querySelector('#name-input');
 const newName = document.querySelector('.profile__info-title');
-const jobInput = document.getElementById('description-input');
+const jobInput = document.querySelector('#description-input');
 const newJob = document.querySelector('.profile__info-subtitle');
 const buttonAdd = document.querySelector('.profile__add-button');// кнопка открытия окна добавления карточек popUpAdd
 const formPlace = document.querySelector('.popup__fieldset-input');
 const popUpAdd = document.querySelector('.popup_card');//окно popUp card
-const formAddElement = document.getElementById('popup__form_card');
-const nameInputCard = document.getElementById('name-input_card');
-const linkInput = document.getElementById('image-input');
+const formAddElement = document.querySelector('#popup__form_card');
+const nameInputCard = document.querySelector('#name-input_card');
+const linkInput = document.querySelector('#image-input');
 const buttonZoom = document.querySelector('.popup-zoom__image');//клик для открытия popUpZoom
-const popUpZoom = document.getElementById('popup-zoom');//окно popUp zoom
+const popUpZoom = document.querySelector('#popup-zoom');//окно popUp zoom
 const imgZoom = document.querySelector('.popup-zoom__image');
-const templateElement = document.getElementById('template__element');//для будущего клона карточки
+const templateElement = document.querySelector('#template__element');//для будущего клона карточки
 const textZoom = document.querySelector('.popup-zoom__subtitle');
 const elements = document.querySelector('.elements');
 
@@ -30,7 +30,7 @@ function closePopUp(popUp) {
   popUp.classList.remove('popup_opened');
 }
 
-function assignData() {
+function fillPopupEditInputs() {
   nameInput.value = newName.textContent;
   jobInput.value = newJob.textContent;
 }
@@ -85,7 +85,7 @@ formAddElement.addEventListener('submit', (evt) => {
 // слушатели
 
 //перебираем окна popup и слушаем кнопку close
-closeButtons.forEach(popup => {
+popupButtons.forEach(popup => {
   popup.addEventListener('click', (evt) => {
     if (evt.target.classList.contains('popup_opened') || evt.target.classList.contains('popup__button-close')) {
       closePopUp(popup);
@@ -93,7 +93,7 @@ closeButtons.forEach(popup => {
   })
 })
 
-buttonEdit.addEventListener('click', () => {openPopUp(popUpEdit), assignData(popUpEdit)});//слушает клик и открывает popUpEdit
+buttonEdit.addEventListener('click', () => {openPopUp(popUpEdit), fillPopupEditInputs(popUpEdit)});//слушает клик и открывает popUpEdit
 formEditElement.addEventListener('submit', submitEditForm);//слушает клик и заносит данные в EditForm
 buttonAdd.addEventListener('click', () => {openPopUp(popUpAdd)});//слушает клик и открывает popUpAdd
 buttonZoom.addEventListener('click', () => {openPopUp(popUpZoom)});//слушает клик и открывает popUpZoom
