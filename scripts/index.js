@@ -1,7 +1,7 @@
 // определение переменных
 const buttonEdit = document.querySelector('.profile__info-edit');// кнопка открытия окна редактирования popUpEdit
 const popUpEdit = document.querySelector('.popup_edit');//окно popUp edit
-const popupButtons = document.querySelectorAll('.popup');// кнопка закрытия popUpS
+const popups = document.querySelectorAll('.popup');// кнопка закрытия popUpS
 const formEditElement = document.querySelector('#popup__form_edit');
 const nameInput = document.querySelector('#name-input');
 const newName = document.querySelector('.profile__info-title');
@@ -85,7 +85,7 @@ formAddElement.addEventListener('submit', (evt) => {
 // слушатели
 
 //перебираем окна popup и слушаем кнопку close
-popupButtons.forEach(popup => {
+popups.forEach(popup => {
   popup.addEventListener('click', (evt) => {
     if (evt.target.classList.contains('popup_opened') || evt.target.classList.contains('popup__button-close')) {
       closePopUp(popup);
