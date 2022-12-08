@@ -1,0 +1,15 @@
+.popup__fieldset-error {
+  display: none;
+}
+
+.popup__fieldset-error_active {
+  display: inline;
+  position: absolute;
+  font-family: 'Inter', 'Arial', 'sans-serif';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #FF0000;
+  margin: 30px auto 13px
+}

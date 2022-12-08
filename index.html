@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="pages/index.css">
   <script defer src="./scripts/cards.js"></script>
   <script defer src="./scripts/index.js"></script>
+  <script defer src="./scripts/validate.js"></script>
   <title>Mesto</title>
 </head>
 
@@ -72,18 +73,29 @@
         <form 
           class="popup__form"
           name="popup"
-          id="popup__form_edit">
+          id="popup__form_edit"
+          novalidate>
           <fieldset class="popup__fieldset">
             <input 
               class="popup__fieldset-input"
+              type="text"
+              minlength="2"
+              maxlength="40"
               id="name-input" 
               name="name"
-              placeholder="Имя">
+              placeholder="Имя"
+              required>
+            <span class="name-input-error popup__fieldset-error"></span>
             <input 
               class="popup__fieldset-input"
+              type="text"
+              minlength="2"
+              maxlength="200"
               id="description-input" 
               name="description"
-              placeholder="О себе">
+              placeholder="О себе"
+              required>
+              <span class="description-input-error popup__fieldset-error"></span>
           </fieldset>
           <button 
             class="popup__button-save"
@@ -107,18 +119,27 @@
         <form 
           class="popup__form"
           name="popup"
-          id="popup__form_card">
+          id="popup__form_card"
+          novalidate>
           <fieldset class="popup__fieldset">
             <input 
               class="popup__fieldset-input"
+              type="text"
+              minlength="2"
+              maxlength="30"
               id="name-input_card" 
               name="name"
-              placeholder="Название">
+              placeholder="Название"
+              required>
+              <span class="name-input_card-error popup__fieldset-error"></span>
             <input 
               class="popup__fieldset-input"
+              type="url"
               id="image-input" 
               name="image"
-              placeholder="Ссылка на картинку">
+              placeholder="Ссылка на картинку"
+              required>
+              <span class="image-input-error popup__fieldset-error"></span>
           </fieldset>
           <button 
             class="popup__button-save" 

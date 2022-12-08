@@ -30,6 +30,15 @@ function closePopUp(popUp) {
   popUp.classList.remove('popup_opened');
 }
 
+function closeEscPopUp(evt) {
+  if (evt.keyCode = 'Escape') {
+    document.querySelector.contains('popup_opened').remove;
+
+  }
+}
+
+document.addEventListener('keydown', closeEscPopUp);
+
 function fillPopupEditInputs() {
   nameInput.value = newName.textContent;
   jobInput.value = newJob.textContent;
