@@ -30,15 +30,15 @@ function closePopUp(popUp) {
   popUp.classList.remove('popup_opened');
 }
 
+//функция закрытия popUpS по нажатию на клавишу Esc
 function closeEscPopUp(evt) {
-  if (evt.keyCode = 'Escape') {
-    document.querySelector.contains('popup_opened').remove;
-
+  if (evt.keyCode === 27) {
+    document.querySelectorAll('.popup_opened').forEach((item) =>
+    (item.classList.remove('popup_opened')));
   }
 }
 
-document.addEventListener('keydown', closeEscPopUp);
-
+//функция присвоения данных в форму edit
 function fillPopupEditInputs() {
   nameInput.value = newName.textContent;
   jobInput.value = newJob.textContent;
@@ -106,3 +106,4 @@ buttonEdit.addEventListener('click', () => {openPopUp(popUpEdit), fillPopupEditI
 formEditElement.addEventListener('submit', submitEditForm);//слушает клик и заносит данные в EditForm
 buttonAdd.addEventListener('click', () => {openPopUp(popUpAdd)});//слушает клик и открывает popUpAdd
 buttonZoom.addEventListener('click', () => {openPopUp(popUpZoom)});//слушает клик и открывает popUpZoom
+document.addEventListener('keydown', closeEscPopUp);//слушает клик клавиши Esc

@@ -52,7 +52,9 @@
 @import url(../blocks/popup/__fieldset-input/popup__fieldset-input.css);
 @import url(../blocks/popup/__fieldset-input/_type/_error/popup__fieldset-input_type_error.css);
 @import url(../blocks/popup/__fieldset-error/popup__fieldset-error.css);
+@import url(../blocks/popup/__fieldset-error/_active/popup__fieldset-error_active.css);
 @import url(../blocks/popup/__button-save/popup__button-save.css);
+@import url(../blocks/popup/__button-save/_inactive/popup__button-save_inactive.css);
 @import url(../blocks/popup-zoom/popup-zoom.css);
 @import url(../blocks/popup-zoom/__close/popup-zoom__close.css);
 @import url(../blocks/popup-zoom/__container/popup-zoom__container.css);
