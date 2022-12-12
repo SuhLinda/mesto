@@ -89,9 +89,6 @@ const enableValidation = () => {
   })
 }
 
-//вызовем enableValidation
-enableValidation();
-
 //функция, ответственная за подключение всех форм
 enableValidation({
   formSelector: '.popup__form',

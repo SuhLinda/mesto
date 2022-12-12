@@ -11,7 +11,7 @@ const buttonAdd = document.querySelector('.profile__add-button');// кнопка
 const formPlace = document.querySelector('.popup__fieldset-input');
 const popUpAdd = document.querySelector('.popup_card');//окно popUp card
 const formAddElement = document.querySelector('#popup__form_card');
-const nameInputCard = document.querySelector('#name-input_card');
+const nameInputCard = document.querySelector('#name-input');
 const linkInput = document.querySelector('#image-input');
 const buttonZoom = document.querySelector('.popup-zoom__image');//клик для открытия popUpZoom
 const popUpZoom = document.querySelector('#popup-zoom');//окно popUp zoom
@@ -59,6 +59,8 @@ function createCard (name, link) {
   const text = elementCard.querySelector('.element__text');
   const buttonLike = elementCard.querySelector('.element__stroke');
   const buttonDelete = elementCard.querySelector('.element__delete');
+  
+  document.addEventListener('keydown', closeEscPopUp);//слушает клик клавиши Esc
 
   img.src = link;
   img.alt = name;
@@ -71,9 +73,10 @@ function createCard (name, link) {
     textZoom.textContent = text.textContent;
   })
   buttonLike.addEventListener('click', (evt) => evt.target.classList.toggle('element__stroke_active'));
-  buttonDelete.addEventListener('click', (evt) => evt.target.closest('.element').remove()); 
+  buttonDelete.addEventListener('click', (evt) => evt.target.closest('.element').remove());
 
   return elementCard;
+
 }
 
 //ставим новый элемент на 1ое место
@@ -85,6 +88,7 @@ function prependCard(box, card) {
 initialCards.forEach((card) => prependCard(elements, createCard(card.name, card.link)));
 
 formAddElement.addEventListener('submit', (evt) => {
+  
   evt.preventDefault();
   prependCard(elements, createCard(nameInputCard.value, linkInput.value));
   formAddElement.reset();
@@ -98,6 +102,7 @@ popups.forEach(popup => {
   popup.addEventListener('click', (evt) => {
     if (evt.target.classList.contains('popup_opened') || evt.target.classList.contains('popup__button-close')) {
       closePopUp(popup);
+      document.removeEventListener('keydown', closeEscPopUp);//слушает клик клавиши Esc
     }
   })
 })
@@ -106,4 +111,3 @@ buttonEdit.addEventListener('click', () => {openPopUp(popUpEdit), fillPopupEditI
 formEditElement.addEventListener('submit', submitEditForm);//слушает клик и заносит данные в EditForm
 buttonAdd.addEventListener('click', () => {openPopUp(popUpAdd)});//слушает клик и открывает popUpAdd
 buttonZoom.addEventListener('click', () => {openPopUp(popUpZoom)});//слушает клик и открывает popUpZoom
-document.addEventListener('keydown', closeEscPopUp);//слушает клик клавиши Esc
