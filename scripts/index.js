@@ -76,7 +76,7 @@ function createCard (name, link) {
   buttonDelete.addEventListener('click', (evt) => evt.target.closest('.element').remove());
 
   return elementCard;
-
+  document.removeEventListener('keydown', closeEscPopUp);//слушает клик клавиши Esc
 }
 
 //ставим новый элемент на 1ое место
@@ -88,7 +88,6 @@ function prependCard(box, card) {
 initialCards.forEach((card) => prependCard(elements, createCard(card.name, card.link)));
 
 formAddElement.addEventListener('submit', (evt) => {
-  
   evt.preventDefault();
   prependCard(elements, createCard(nameInputCard.value, linkInput.value));
   formAddElement.reset();
@@ -102,7 +101,6 @@ popups.forEach(popup => {
   popup.addEventListener('click', (evt) => {
     if (evt.target.classList.contains('popup_opened') || evt.target.classList.contains('popup__button-close')) {
       closePopUp(popup);
-      document.removeEventListener('keydown', closeEscPopUp);//слушает клик клавиши Esc
     }
   })
 })
